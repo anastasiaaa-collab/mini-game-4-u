@@ -1,0 +1,72 @@
+:root {
+    --bg-color: #f0f4f8;
+    --accent-soft: #ffcfdf; /* Pink lembut */
+    --text-color: #5d6d7e;
+    --mint: #d1f2eb;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+#gameCanvas {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 8px solid var(--mint);
+}
+
+/* Animasi Bernapas untuk Mindfulness */
+.breathing-circle {
+    width: 100px;
+    height: 100px;
+    background: var(--accent-soft);
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+.btn-soft {
+    background: var(--mint);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #45b39d;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-soft:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}

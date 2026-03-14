@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Drop - Ruang Tenangmu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>Zen Drop ✨</h1>
+            <p id="affirmation">Ambil napas dalam-dalam...</p>
+        </header>
+        
+        <div id="game-canvas-area">
+            <canvas id="gameCanvas"></canvas>
+            <div id="drop-guide"></div>
+        </div>
+
+        <div class="controls">
+            <button onclick="resetGame()" class="btn-soft">Mulai Ulang Lembut</button>
+            <div id="focus-timer">Sesi Fokus: 02:00</div>
+        </div>
+    </div>
+
+    <div id="mindfulness-modal" class="modal">
+        <div class="modal-content">
+            <h2>Tarik Napas Sejenak... 🌿</h2>
+            <div class="breathing-circle"></div>
+            <p>Ikuti lingkaran untuk menenangkan pikiran sebelum bermain.</p>
+            <button id="start-btn" disabled>Tunggu sebentar...</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
